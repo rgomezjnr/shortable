@@ -1,11 +1,11 @@
 # shortable
-Keep track of asset shortable status, and receive a notification when shortable status changes, e.g. from HTB to ETB
+Receive an alert if an asset becomes shortable, e.g. from HTB to ETB, or vice versa
 
 ## Summary
 shortable is a Python script for tracking the short selling availability of assets. The script works by maintaining a
 database of assets and their shorting availability (either true, shortable, easy-to-borrow (ETB) or false, non-shortable,
 hard-to-borrow (HTB)). When the script notices the asset shortable condition has changed since the last run, it notifies
-the user with a Windows toast notification. This may be helpful in quickly acting on ETB or HTB changes of assets or
+the user with a Windows 10 toast notification. This may be helpful in quickly acting on ETB or HTB changes of assets or
 gauging market sentiment. The script currently only supports the Alpaca Securities broker but could be expanded to other
 brokers that have API access.
 

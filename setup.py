@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.1.0",
     author="Robert Gomez, Jr.",
     author_email="rgomezjnr@gmail.com",
-    description="Keep track of asset shortable status, and receive a notification when shortable status changes, e.g. from HTB to ETB",
+    description="Receive an alert if an asset becomes shortable, e.g. from HTB to ETB, or vice versa",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/rgomezjnr/shortable",
@@ -17,7 +17,7 @@ setuptools.setup(
     install_requires=["winotify", "alpaca-trade-api"],
     license="MIT",
     entry_points ={'console_scripts':['shortable=shortable.shortable:run']},
-    keywords="assets stocks short sell stock market trade broker alpaca windows toast notification database json api cli tool script python",
+    keywords="assets stocks short sell stock market trade broker alpaca windows toast notification alert database json api cli tool script python",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
