@@ -84,7 +84,8 @@ class Shortable():
             toast.build().show()
             logging.info('toast notification fired')
 
-if __name__ == '__main__':
+# Entry point for running launch script after installing package, see setup.py
+def run():
     parser = argparse.ArgumentParser(
         prog='shortable',
         description='Create alert if asset becomes shortable'
@@ -96,11 +97,12 @@ if __name__ == '__main__':
     #logging.basicConfig(filename='shortable.log', encoding='utf-8', level=logging.INFO)
     logging.basicConfig(filename='shortable.log', level=logging.INFO, format='%(asctime)s %(message)s')
 
-    #short.run()
-
     shortable = Shortable()
     shortable.read_old_short_status()
     shortable.get_new_short_status()
     shortable.check_short_status_changes()
     shortable.write_new_short_status()
     shortable.send_notification()
+
+if __name__ == '__main__':
+    run()

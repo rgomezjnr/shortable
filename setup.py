@@ -16,7 +16,7 @@ setuptools.setup(
     python_requires='>=3.6',
     install_requires=["winotify", "alpaca-trade-api"],
     license="MIT",
-    entry_points ={'console_scripts':['shortable=shortable.shortable:main']},
+    entry_points ={'console_scripts':['shortable=shortable.shortable:run']},
     keywords="assets stocks short sell stock market trade broker alpaca windows toast notification database json api cli tool script python",
     classifiers=[
         "Programming Language :: Python :: 3",
