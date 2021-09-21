@@ -3,6 +3,7 @@
 import json
 import logging
 import argparse
+import textwrap
 
 import alpaca_trade_api as alpaca
 from winotify import Notification
@@ -88,7 +89,14 @@ class Shortable():
 def run():
     parser = argparse.ArgumentParser(
         prog='shortable',
-        description='Receive an alert if an asset becomes shortable, e.g. from HTB to ETB, or vice versa'
+        description='Receive an alert if an asset becomes shortable, e.g. from HTB to ETB, or vice versa',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent('''\
+            Setup
+            1. Define assets to track in shortable.json e.g. {"AMZN": true, "MSFT": true, "TSLA": false}.
+            2. Run shortable from the same directory as shortable.json. When there are no asset shortable changes there is no output or notification. Check shortable.log to verify operation.
+            3. Optionally schedule shortable to run routinely using Windows Task Scheduler.
+            ''')
     )
     #parser.add_argument('ASSET', type=str.upper, help='Ticker of asset to check')
     parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1.0')

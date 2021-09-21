@@ -25,19 +25,21 @@ shortable can be used with Alpaca paper accounts by setting APCA_API_BASE_URL=ht
 [Alpaca Environment Variables](https://github.com/alpacahq/alpaca-trade-api-python#alpaca-environment-variables).
 
 ## Usage
-1. Define assets to track in [shortable.json](#shortablejson).
-2. Run the script. When there are no asset shortable changes there is no output or notification. Check [shortable.log](#shortablelog) to verify operation.
-3. Optionally schedule shortable to routinely run using Windows Task Scheduler.
+1. Define assets to track in [shortable.json](#shortablejson) e.g. {"AMZN": true, "MSFT": true, "TSLA": false}.
+2. Run shortable from the same directory as [shortable.json](#shortablejson). When there are no asset shortable changes there is no output or notification. Check [shortable.log](#shortablelog) to verify operation.
+3. Optionally schedule shortable to run routinely using Windows Task Scheduler.
 
 ## Files
 ### shortable.json
-Dictionary database for recording asset shortable status. Use JSON format such as follows:
+Dictionary database for recording asset shortable status. Save in the directory you intend to run shortable from.
+Use JSON format such as follows:
 ```
-{"AMZN": true, "MSFT": true, "TSLA": true}
+{"AMZN": true, "MSFT": true, "TSLA": false}
 ```
 
 ### shortable.log
 Log file indicating checks for shortable status, changes to shortable status, and when toast notifications are fired.
+Automatically created in the same directory from which shortable is run from.
 
 ## Support
 If you find an issue or have any feedback please submit an issue on [GitHub](https://github.com/rgomezjnr/shortable/issues).
