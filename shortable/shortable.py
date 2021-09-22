@@ -81,7 +81,7 @@ class Shortable():
         if self.report:
             logging.info('%s', self.report)
 
-            toast = Notification(app_id='shortable', title='�� shortable', msg=self.report)
+            toast = Notification(app_id='📉 shortable', title='📉 shortable', msg=self.report)
             toast.build().show()
             logging.info('toast notification fired')
 
