@@ -1,6 +1,10 @@
 # shortable
 Receive an alert if an asset becomes shortable, e.g. from HTB to ETB, or vice versa
 
+![shortable notification](images/shortable-notification.png)
+
+![shortable action center](images/shortable-action-center.png)
+
 ## Summary
 shortable is a Python script for tracking the short selling availability of assets. The script works by maintaining a
 database of assets and their shorting availability (either true, shortable, easy-to-borrow (ETB) or false, non-shortable,
